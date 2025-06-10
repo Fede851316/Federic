@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+// Funzione che somma due numeri interi
+int sum(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int x = 10, y = 20;
+    int s = sum(x, y); // chiama la funzione somma
+    printf("La somma è: %d\n", s); // stampa il risultato
+    return 0;
+}
