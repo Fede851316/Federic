@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main(void) {
+    char nome[50];
+    int num1, num2, somma;
+
+    // Lettura del nome
+    printf("Inserisci il tuo nome: ");
+    if (scanf("%49s", nome) != 1) {
+        printf("Errore nella lettura del nome.\n");
+        return 1;
+    }
+
+    // Lettura dei due numeri
+    printf("Inserisci il primo numero: ");
+    if (scanf("%d", &num1) != 1) {
+        printf("Errore nella lettura del primo numero.\n");
+        return 1;
+    }
+
+    printf("Inserisci il secondo numero: ");
+    if (scanf("%d", &num2) != 1) {
+        printf("Errore nella lettura del secondo numero.\n");
+        return 1;
+    }
+
+    // Calcolo della somma
+    somma = num1 + num2;
+
+    // Stampa del risultato
+    printf("\nCiao %s! La somma di %d e %d è: %d\n", nome, num1, num2, somma);
+
+    return 0;
+}
