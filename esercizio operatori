@@ -1,32 +1,52 @@
 #include <stdio.h>
 
-int main(void) {
-    int a = 10, b = 3;
-    float x = 10.0f, y = 3.0f;
+int main() {
+    int num1, num2;
 
-    // Operazioni intere
-    int sum      = a + b;      // somma: 13
-    int diff     = a - b;      // sottrazione: 7
-    int prod     = a * b;      // moltiplicazione: 30
-    int quot     = a / b;      // divisione intera: 3 (troncamento)
-    int mod      = a % b;      // modulo: 1
+    // Chiede all'utente di inserire due numeri interi
+    printf("Inserisci il primo numero intero: ");
+    scanf("%d", &num1);
 
-    // Operazioni floating-point
-    float fquot  = x / y;      // divisione reale: circa 3.333333
+    printf("Inserisci il secondo numero intero: ");
+    scanf("%d", &num2);
 
-    // Incremento e decremento
-    int pre_inc  = ++a;        // a diventa 11, poi assegnato a pre_inc
-    int post_inc = b++;        // post_inc = 3, poi b diventa 4
+    // Calcoli aritmetici
+    int somma = num1 + num2;
+    int differenza = num1 - num2;
+    int prodotto = num1 * num2;
 
-    // Stampa dei risultati
-    printf("Interi: %d + %d = %d\n", 10, 3, sum);
-    printf("Interi: %d - %d = %d\n", 10, 3, diff);
-    printf("Interi: %d * %d = %d\n", 10, 3, prod);
-    printf("Interi: %d / %d = %d (troncato)\n", 10, 3, quot);
-    printf("Interi: %d %% %d = %d (resto)\n", 10, 3, mod);
-    printf("Float: %.6f / %.6f = %.6f\n", x, y, fquot);
-    printf("Pre-incremento: ++10 = %d\n", pre_inc);
-    printf("Post-incremento: 3++ = %d (b ora = %d)\n", post_inc, b);
+    printf("\n--- RISULTATI ARITMETICI ---\n");
+    printf("Somma: %d\n", somma);
+    printf("Differenza: %d\n", differenza);
+    printf("Prodotto: %d\n", prodotto);
+
+    // Divisione intera e modulo, con controllo per divisione per zero
+    if (num2 != 0) {
+        int quoziente = num1 / num2;
+        int resto = num1 % num2;
+
+        printf("Quoziente (divisione intera): %d\n", quoziente);
+        printf("Resto della divisione: %d\n", resto);
+    } else {
+        printf("Errore: divisione per zero non consentita.\n");
+    }
+
+    // Verifiche logiche
+    printf("\n--- VERIFICHE LOGICHE ---\n");
+
+    // Verifica con AND: entrambi i numeri > 0
+    if (num1 > 0 && num2 > 0) {
+        printf("Entrambi i numeri sono maggiori di zero. (AND verificato)\n");
+    } else {
+        printf("Almeno uno dei numeri NON è maggiore di zero.\n");
+    }
+
+    // Verifica con OR: almeno uno dei due numeri è pari
+    if (num1 % 2 == 0 || num2 % 2 == 0) {
+        printf("Almeno uno dei due numeri è pari. (OR verificato)\n");
+    } else {
+        printf("Entrambi i numeri sono dispari.\n");
+    }
 
     return 0;
 }
