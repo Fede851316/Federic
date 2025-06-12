@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+
+    char nome_della_mia_citta[5];
+    printf("inserisci un nome di una citta:");
+    scanf(nome_della_mia_citta);
+    
+    float num1;
+    float num2;
+    float num3;
+    printf("Inserisci il primo numero: \n ");
+    scanf("%f", &num1);
+    
+    printf("inserisci il secondo numero: \n");
+    scanf("%f", &num2);
+    
+    printf("Inserisci il terzo numero: \n ");
+    scanf("%f", &num3);
+    
+    printf("inserisci un nome di una citta: \n " );
+    scanf("%f,%f,%f,num1,num2,num3, \n");
+    
+    
+    return 0;
+}
