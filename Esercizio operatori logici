@@ -1,0 +1,67 @@
+#include <stdio.h>
+
+int main() {
+    int num1, num2, num3, X;
+
+    // Input: tre numeri interi
+    printf("Inserisci il primo numero: ");
+    scanf("%d", &num1);
+
+    printf("Inserisci il secondo numero: ");
+    scanf("%d", &num2);
+
+    printf("Inserisci il terzo numero: ");
+    scanf("%d", &num3);
+
+    // Input: soglia
+    printf("Inserisci il valore soglia X: ");
+    scanf("%d", &X);
+
+    // Calcoli aritmetici
+    int somma = num1 + num2;
+    int prodotto = num2 * num3;
+
+    // Output dei risultati
+    printf("\n--- RISULTATI ---\n");
+    printf("Somma (num1 + num2) = %d\n", somma);
+    printf("Moltiplicazione (num2 * num3) = %d\n", prodotto);
+
+    // Verifiche di confronto con X
+    if (somma > X) {
+        printf("La somma è maggiore di X.\n");
+    } else {
+        printf("La somma NON è maggiore di X.\n");
+    }
+
+    if (prodotto < X) {
+        printf("La moltiplicazione è minore di X.\n");
+    } else {
+        printf("La moltiplicazione NON è minore di X.\n");
+    }
+
+    // Operatori logici
+    printf("\n--- VERIFICHE LOGICHE ---\n");
+
+    // OR: almeno uno è negativo
+    if (num1 < 0 || num2 < 0 || num3 < 0) {
+        printf("Almeno uno dei numeri è negativo. (OR verificato)\n");
+    } else {
+        printf("Nessun numero è negativo.\n");
+    }
+
+    // AND: tutti diversi da zero
+    if (num1 != 0 && num2 != 0 && num3 != 0) {
+        printf("Tutti i numeri sono diversi da zero. (AND verificato)\n");
+    } else {
+        printf("Almeno uno dei numeri è zero.\n");
+    }
+
+    // NOT combinato con OR: nessuno è uguale a 100
+    if (!(num1 == 100 || num2 == 100 || num3 == 100)) {
+        printf("Nessuno dei numeri è uguale a 100. (NOT combinato con OR)\n");
+    } else {
+        printf("Almeno uno dei numeri è uguale a 100.\n");
+    }
+
+    return 0;
+}
