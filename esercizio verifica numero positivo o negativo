@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int numero;
+
+    // Chiedi all'utente di inserire un numero intero
+    printf("Inserisci un numero intero: ");
+    scanf("%d", &numero);
+
+    // Verifica se il numero è positivo, negativo o zero
+    if (numero > 0) {
+        printf("Il numero è positivo.\n");
+
+        // If : verifica se il numero è maggiore di 100
+        if (numero > 100) {
+            printf("Wow! Il numero è maggiore di 100.\n");
+        }
+    } else if (numero < 0) {
+        printf("Il numero è negativo.\n");
+    } else {
+        printf("Il numero è zero.\n");
+    }
+
+    return 0;
+}
