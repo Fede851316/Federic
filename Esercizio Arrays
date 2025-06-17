@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int somma(int n, int* arr) {
+    int sum = 0;
+    for (int i = 0; i < n; i++) {
+        sum += *(arr + i);
+    }
+    return sum;
+}
+
+int main() {
+    int arr[] = {10, 20, 30, 40, 50};
+    int risultato = somma(5, arr);
+    printf("La somma è: %d\n", risultato);
+    return 0;
+}
